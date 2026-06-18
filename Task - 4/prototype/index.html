@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FitStart — Low-fidelity Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <header>
+        <h1>FitStart</h1>
+        <button id="toggle-annotations" class="link">View annotations</button>
+      </header>
+
+      <main>
+        <section class="screen active" data-screen="welcome">
+          <h2>Welcome to FitStart</h2>
+          <p>Personalized plans, simple steps — get moving today.</p>
+          <button id="start-btn" class="primary">Get Started</button>
+        </section>
+
+        <section class="screen" data-screen="onboarding-1">
+          <h2>Onboarding — Activity Level</h2>
+          <p>How active are you currently?</p>
+          <div class="options">
+            <button class="option" data-value="sedentary">Sedentary</button>
+            <button class="option" data-value="light">Lightly active</button>
+            <button class="option" data-value="active">Active</button>
+          </div>
+          <div class="controls">
+            <button class="back">Back</button>
+            <button class="next primary">Next</button>
+          </div>
+        </section>
+
+        <section class="screen" data-screen="onboarding-2">
+          <h2>Onboarding — Preferences</h2>
+          <p>Pick preferred workout types</p>
+          <div class="chips">
+            <button class="chip" data-value="cardio">Cardio</button>
+            <button class="chip" data-value="strength">Strength</button>
+            <button class="chip" data-value="yoga">Yoga</button>
+            <button class="chip" data-value="mix">Mix</button>
+          </div>
+          <div class="controls">
+            <button class="back">Back</button>
+            <button class="next primary">Next</button>
+          </div>
+        </section>
+
+        <section class="screen" data-screen="profile">
+          <h2>Profile Setup</h2>
+          <form id="profile-form">
+            <label>Display name<input name="name" placeholder="Alex"/></label>
+            <label>Age<input name="age" type="number" min="13" max="120"/></label>
+            <label>Height (cm)<input name="height" type="number"/></label>
+            <label>Weight (kg)<input name="weight" type="number"/></label>
+          </form>
+          <div class="controls">
+            <button class="back">Back</button>
+            <button id="to-goals" class="primary">Continue</button>
+          </div>
+        </section>
+
+        <section class="screen" data-screen="goals">
+          <h2>Select Initial Goals</h2>
+          <p>Choose up to 3 goals to start with</p>
+          <div class="goal-list">
+            <button class="goal" data-goal="lose_weight">Lose weight</button>
+            <button class="goal" data-goal="gain_muscle">Gain muscle</button>
+            <button class="goal" data-goal="improve_endurance">Improve endurance</button>
+            <button class="goal" data-goal="flexibility">Increase flexibility</button>
+            <button class="goal" data-goal="stress_relief">Stress relief</button>
+          </div>
+          <div class="controls">
+            <button class="back">Back</button>
+            <button id="finish" class="primary">Finish</button>
+          </div>
+        </section>
+
+        <section class="screen" data-screen="summary">
+          <h2>All Set!</h2>
+          <div id="summary-content">
+            <!-- Filled dynamically -->
+          </div>
+          <p>We'll build your first plan based on these choices.</p>
+          <div class="controls">
+            <button id="start-app" class="primary">Open Dashboard</button>
+          </div>
+        </section>
+      </main>
+
+      <aside id="annotations" class="annotations hidden">
+        <h3>Annotated decisions</h3>
+        <div id="annotations-content">
+          <!-- content populated by app.js -->
+        </div>
+      </aside>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

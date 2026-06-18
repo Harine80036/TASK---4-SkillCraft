@@ -1,0 +1,23 @@
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Arial,sans-serif}
+body{background:#f3f4f6;color:#111;display:flex;align-items:center;justify-content:center;height:100vh;margin:0}
+.frame{width:380px;background:#fff;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.08);overflow:hidden}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid #eef2f7}
+h1{font-size:18px;margin:0}
+main{padding:20px}
+.screen{display:none}
+.screen.active{display:block}
+h2{margin:0 0 8px 0;font-size:16px}
+p{margin:0 0 12px 0;color:#4b5563}
+.options,.chips,.goal-list{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+button{border:1px solid transparent;background:#fff;padding:10px 12px;border-radius:10px;cursor:pointer}
+button.link{background:transparent;border:none;color:#2563eb}
+button.primary{background:#2563eb;color:#fff;border-radius:10px;padding:10px 14px}
+.option, .chip, .goal{border:1px solid #e5e7eb;background:#fff}
+.option.selected, .chip.selected, .goal.selected{background:#eef2ff;border-color:#93c5fd}
+.controls{display:flex;justify-content:space-between;margin-top:14px}
+label{display:block;margin-bottom:8px}
+input{width:100%;padding:8px;border:1px solid #e6eef6;border-radius:8px}
+.annotations{position:absolute;right:12px;top:72px;width:300px;background:#fff;border-left:1px solid #eef2f7;padding:14px;box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+.annotations.hidden{display:none}
+#annotations h3{margin-top:0}
+.small{font-size:13px;color:#6b7280}
